@@ -199,7 +199,7 @@
   
   <main class="wrap">
   <h1>App GDPR 合规评估报告</h1>
-  <div class="sub">静态 + 动态 + 政策分析 · HakkoAI · _9ab831db.xapk · 生成于 2026-08-12 14:47</div>
+  <div class="sub">静态 + 动态 + 政策分析 · HakkoAI · _9ab831db.xapk · 生成于 2026-08-12 16:59</div>
 
   
   <div class="card" id="s0">
@@ -4430,6 +4430,7 @@
         <h4>1. 提供隐私政策并在首次运行前明示告知 <span class="pill" style="background:#2e7d32">未发现违规风险</span></h4>
         <div class="reg">依据:GDPR Art.13</div>
         <div class="desc"><b>【结果描述】</b>检测到隐私政策（https://www.hakko.ai/en/privacy.html）。</div>
+        
         <details class="ev" style="cursor:pointer;"><summary style="font-size:11.5px;color:#666;">【证据详情】(1)</summary><div style="font-size:11px;">· https://www.hakko.ai/en/privacy.html</div></details>
         
       </div>
@@ -4438,7 +4439,34 @@
       <div class="finding" style="border-left-color:#b71c1c">
         <h4>2. 隐私政策告知要素完整（目的、法律依据、留存期、联系方式） <span class="pill" style="background:#b71c1c">发现违规风险</span></h4>
         <div class="reg">依据:GDPR Art.13/14</div>
-        <div class="desc"><b>【结果描述】</b>隐私政策正文未见以下必备告知要素：法律依据、留存期限。</div>
+        <div class="desc"><b>【结果描述】</b>隐私政策正文未见以下必备告知要素：法律依据、留存期限。逐项补写要求见下表。</div>
+        
+        <table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:11.5px;">
+          <thead><tr style="background:#f6f7fb;">
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:24%;">对象</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:14%;">定性</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:31%;">为什么违规</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:31%;">如何整改</th>
+          </tr></thead>
+          <tbody>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">法律依据</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">缺失</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">政策全文未见「法律依据」的有效声明，不满足 Art.13 的告知义务。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">为每一类处理分别写明 Art.6(1) 中的具体依据（同意 / 合同必要 / 合法利益），主张合法利益的须同时给出利益平衡测试结论；泛泛一句 “with your consent” 不构成声明。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">留存期限</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">缺失</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">政策全文未见「留存期限」的有效声明，不满足 Art.13 的告知义务。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">给出各类数据的具体留存期，或写明确定期限的标准（如「账号注销后 30 日内删除」）；单个功能的留存说明（如截图保留 3 天）不能替代通用留存政策。</td>
+            </tr>
+          
+          </tbody>
+        </table>
+        
         <details class="ev" style="cursor:pointer;"><summary style="font-size:11.5px;color:#666;">【证据详情】(2)</summary><div style="font-size:11px;">· 缺：法律依据</div><div style="font-size:11px;">· 缺：留存期限</div></details>
         <div class="rec">🔧 整改建议:在隐私政策中补齐处理目的、每类处理的法律依据、个人数据留存期限、控制者身份与联系方式(含 DPO 如适用)。</div>
       </div>
@@ -4448,6 +4476,7 @@
         <h4>3. 处理特殊类别数据须具备 Art.9 例外(通常为明示同意) <span class="pill" style="background:#999">本次不适用</span></h4>
         <div class="reg">依据:GDPR Art.9</div>
         <div class="desc"><b>【结果描述】</b>未申请健康/生物识别/活动识别等特殊类别数据权限，本次未观测到特殊类别数据处理，Art.9 不触发。</div>
+        
         
         
       </div>
@@ -4463,7 +4492,62 @@
       <div class="finding" style="border-left-color:#b71c1c">
         <h4>4. 用户同意前不得收集使用个人信息 <span class="pill" style="background:#b71c1c">发现违规风险</span></h4>
         <div class="reg">依据:ePrivacy Art.5(3) · GDPR Art.6</div>
-        <div class="desc"><b>【结果描述】</b>在用户同意隐私政策前，App/SDK 已读取个人信息。同意前的读取/上报缺乏合法性基础。</div>
+        <div class="desc"><b>【结果描述】</b>在用户同意隐私政策前，App/SDK 已读取个人信息。同意前的读取/上报缺乏合法性基础。逐个接收方/调用的定性与整改见下表。</div>
+        
+        <table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:11.5px;">
+          <thead><tr style="background:#f6f7fb;">
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:24%;">对象</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:14%;">定性</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:31%;">为什么违规</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:31%;">如何整改</th>
+          </tr></thead>
+          <tbody>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">api-tokyo.hakko.ai</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">同意前上报</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">最早 t=1.6s 即收到 advertising_id、device_id、email，共 40 条；此时用户尚未作出任何同意表示。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">把该 SDK/请求的初始化推迟到取得同意之后再执行（含其自带的 ContentProvider 自启动，需显式禁用）；若主张属「提供用户明确请求的服务所严格必要」的 ePrivacy 例外，须书面记录必要性论证，且该例外不覆盖分析与广告用途。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">app.adjust.com（Adjust）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">同意前上报</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">最早 t=2.7s 即收到 advertising_id、device_id，共 46 条；此时用户尚未作出任何同意表示。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">把该 SDK/请求的初始化推迟到取得同意之后再执行（含其自带的 ContentProvider 自启动，需显式禁用）；若主张属「提供用户明确请求的服务所严格必要」的 ePrivacy 例外，须书面记录必要性论证，且该例外不覆盖分析与广告用途。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">gator.uba.ap-southeast-1.volces.com（火山引擎 Volcengine (ByteDance)）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">同意前上报</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">最早 t=3.7s 即收到 cookie，共 220 条；此时用户尚未作出任何同意表示。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">把该 SDK/请求的初始化推迟到取得同意之后再执行（含其自带的 ContentProvider 自启动，需显式禁用）；若主张属「提供用户明确请求的服务所严格必要」的 ePrivacy 例外，须书面记录必要性论证，且该例外不覆盖分析与广告用途。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">o4511244481003520.ingest.us.sentry.io（Sentry）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">同意前上报</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">最早 t=3.9s 即收到 email，共 3 条；此时用户尚未作出任何同意表示。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">把该 SDK/请求的初始化推迟到取得同意之后再执行（含其自带的 ContentProvider 自启动，需显式禁用）；若主张属「提供用户明确请求的服务所严格必要」的 ePrivacy 例外，须书面记录必要性论证，且该例外不覆盖分析与广告用途。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">frontier-myatob.byteoversea.com（ByteDance 国际后端）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">同意前上报</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">最早 t=5.6s 即收到 device_id，共 64 条；此时用户尚未作出任何同意表示。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">把该 SDK/请求的初始化推迟到取得同意之后再执行（含其自带的 ContentProvider 自启动，需显式禁用）；若主张属「提供用户明确请求的服务所严格必要」的 ePrivacy 例外，须书面记录必要性论证，且该例外不覆盖分析与广告用途。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">app.adjust.io</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">同意前上报</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">最早 t=9.2s 即收到 advertising_id、device_id，共 1 条；此时用户尚未作出任何同意表示。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">把该 SDK/请求的初始化推迟到取得同意之后再执行（含其自带的 ContentProvider 自启动，需显式禁用）；若主张属「提供用户明确请求的服务所严格必要」的 ePrivacy 例外，须书面记录必要性论证，且该例外不覆盖分析与广告用途。</td>
+            </tr>
+          
+          </tbody>
+        </table>
+        
         
         <div class="rec">🔧 整改建议:确保用户在《隐私政策》同意墙点击「同意」前，App 及任何第三方 SDK 不读取、不上报任何个人信息，SDK 延迟到同意后再初始化。</div>
       </div>
@@ -4473,6 +4557,7 @@
         <h4>5. 提供与给予同意同样便捷的撤回同意途径 <span class="pill" style="background:#b71c1c">发现违规风险</span></h4>
         <div class="reg">依据:GDPR Art.7(3)</div>
         <div class="desc"><b>【结果描述】</b>运行时未发现任何同意机制(无 CMP 控件、未取得厂商清单),而收集已在进行 —— 用户从未被征询同意,也就不存在可撤回的同意;政策中的退订说明仅涉及营销邮件,不构成 Art.7(3) 意义上的撤回途径。</div>
+        
         
         <div class="rec">🔧 整改建议:先按 Art.7 建立有效同意机制(明确肯定性动作、按目的分项、拒绝与同意同样便捷),再提供与之对应的撤回入口。</div>
       </div>
@@ -4488,9 +4573,57 @@
       <div class="finding" style="border-left-color:#b71c1c">
         <h4>6. 遵循最小必要原则，不申请与功能无关的权限 <span class="pill" style="background:#b71c1c">发现违规风险</span></h4>
         <div class="reg">依据:GDPR Art.5(1)(c)</div>
-        <div class="desc"><b>【结果描述】</b>申请了 4 项经研判与 App 功能无关且高危的权限（申请行为本身即超出目的所必需的范围；本轮未取得运行时调用证据，不影响该项认定）（疑似超范围收集）（App 用途研判：AI 游戏陪玩:官网自述 “Your AI Game Companion”,核心卖点是 AI 通过屏幕共享观看用户游戏画面并实时提示(含 MediaProjection + 计算机视觉服务 + 悬浮窗组件);同时提供 AI 角色语音通话/文字聊天、用户创建 AI 角色(UGC)、AI 生图、头像与媒体上传、社交关注与签到激励。）。</div>
-        <details class="ev" style="cursor:pointer;"><summary style="font-size:11.5px;color:#666;">【证据详情】(5)</summary><div style="font-size:11px;">· android.permission.WRITE_EXTERNAL_STORAGE：unnecessary/medium — targetSDK 36 下该权限在 Android 10+ 已基本失效(分区存储),保留写权限无对应功能需要,属冗余申请。</div><div style="font-size:11px;">· android.permission.ACCESS_MEDIA_LOCATION：unnecessary/high — 该权限专用于读取相册照片 EXIF 中的 GPS 坐标。头像/媒体上传无需用户的历史位置信息,属超出目的的收集(Art.5(1)(c))。应移除;确需上传原图时应先剥离 EXIF 位置。</div><div style="font-size:11px;">· android.permission.READ_PHONE_STATE：unnecessary/high — App 无电话/短信/SIM 相关面向用户功能,无对应 uses-feature 与组件。该权限是持久设备标识(IMEI/IMSI 等不可重置标识)的入口,与实测大量 device_id 上报形成呼应,属高危冗余申请。</div><div style="font-size:11px;">· android.permission.PACKAGE_USAGE_STATS：unnecessary/high — 特殊访问权限,可读取设备上『装了哪些 App、各用多久、最近何时使用』的完整使用行为画像。2026-08-12 以 Ultra 账号解锁屏幕共享后取得直接证据:共享期间 App **持续把前台应用包名上报第一方后端** —— `POST /api/game/action/report`,请求体形如 {"package":{"name":"com.android.settings"},"timestamp":1786508615},配套 `GET /api/game/get_game_by_package/<pkg>`;实测被上报的包含 com.google.android.apps.nexuslauncher、com.android.settings、com.android.chrome,**并不限于游戏**,频次约每 3-15 秒一次。因此本项已由『收了却用不上(免费用户授权后被 Ultra 付费墙挡住)』升级为『实际持续外传应用使用时间线』:授权弹窗自称『only access the process name』与实际上报的『包名+时间戳序列』不符,构成 Art.5(1)(a) 透明性与 Art.5(1)(c) 最小化问题;政策全文亦无 app usage / installed apps 相关披露。</div><div style="font-size:11px;">· Manifest.permission.CAPTURE_AUDIO_OUTPUT：unnecessary/high — 该权限为 signature|privileged 级,普通第三方应用无法获授。清单中声明它本身即异常(可捕获系统音频输出,即录制其他应用正在播放的声音)。应移除;若确有游戏内声音识别需求,须单独说明目的与法律依据。</div></details>
-        <div class="rec">🔧 整改建议:移除与 App 功能无关的权限；次要功能所需的高敏权限改为可选、即时申请并专门告知目的。</div>
+        <div class="desc"><b>【结果描述】</b>观测到 1 项与 App 功能无关的危险权限被实际使用；另有 3 项经研判与功能无关且高危的权限（申请行为本身即超出目的所必需的范围；本轮未取得运行时调用证据，不影响该项认定）；另有 1 项冗余权限待清理（疑似超范围收集）（App 用途研判：AI 游戏陪玩:官网自述 “Your AI Game Companion”,核心卖点是 AI 通过屏幕共享观看用户游戏画面并实时提示(含 MediaProjection + 计算机视觉服务 + 悬浮窗组件);同时提供 AI 角色语音通话/文字聊天、用户创建 AI 角色(UGC)、AI 生图、头像与媒体上传、社交关注与签到激励。）。逐权限的定性与整改见下表。</div>
+        
+        <table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:11.5px;">
+          <thead><tr style="background:#f6f7fb;">
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:24%;">对象</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:14%;">定性</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:31%;">为什么违规</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:31%;">如何整改</th>
+          </tr></thead>
+          <tbody>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">android.permission.WRITE_EXTERNAL_STORAGE</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">应清理:与功能无关</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">targetSDK 36 下该权限在 Android 10+ 已基本失效(分区存储),保留写权限无对应功能需要,属冗余申请。（本轮无调用证据(插桩未启用)）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">直接从 AndroidManifest 删除。targetSDK 36 下该权限在 Android 10+ 已被分区存储架空,删除后不影响任何现有功能;写入自有目录用 getExternalFilesDir()/MediaStore,均无需该权限。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">android.permission.ACCESS_MEDIA_LOCATION</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">违规:与功能无关且高危</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">该权限专用于读取相册照片 EXIF 中的 GPS 坐标。头像/媒体上传无需用户的历史位置信息,属超出目的的收集(Art.5(1)(c))。应移除;确需上传原图时应先剥离 EXIF 位置。（本轮无调用证据(插桩未启用)）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">删除该权限。头像/媒体上传只需要图片本身,不需要拍摄地点。若产品确实要保留原图,应在客户端上传前剥离 EXIF 的 GPS/位置字段(ExifInterface 置空 GPS* 标签)再发出,并在隐私政策中说明「上传的图片已去除位置信息」。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">android.permission.READ_PHONE_STATE</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">违规:与功能无关且高危</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">App 无电话/短信/SIM 相关面向用户功能,无对应 uses-feature 与组件。该权限是持久设备标识(IMEI/IMSI 等不可重置标识)的入口,与实测大量 device_id 上报形成呼应,属高危冗余申请。（本轮无调用证据(插桩未启用)）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">删除该权限。App 无任何电话/短信/SIM 功能。若目的是设备识别,必须改用可重置标识:登录后用服务端下发的账号级 ID,未登录场景用 ANDROID_ID 或 App 自生成并可随卸载重置的 UUID;禁止读取 IMEI/IMSI/serial 这类不可重置标识。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">android.permission.PACKAGE_USAGE_STATS</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">违规:与功能无关且高危</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">特殊访问权限,可读取设备上『装了哪些 App、各用多久、最近何时使用』的完整使用行为画像。2026-08-12 以 Ultra 账号解锁屏幕共享后取得直接证据:共享期间 App 持续把前台应用包名上报第一方后端 —— `POST /api/game/action/report`,请求体形如 {"package":{"name":"com.android.settings"},"timestamp":1786508615},配套 `GET /api/game/get_game_by_package/<pkg>`;实测被上报的包含 com.google.android.apps.nexuslauncher、com.android.settings、com.android.chrome,并不限于游戏,频次约每 3-15 秒一次。因此本项已由『收了却用不上(免费用户授权后被 Ultra 付费墙挡住)』升级为『实际持续外传应用使用时间线』:授权弹窗自称『only access the process name』与实际上报的『包名+时间戳序列』不符,构成 Art.5(1)(a) 透明性与 Art.5(1)(c) 最小化问题;政策全文亦无 app usage / installed apps 相关披露。（运行时使用的判定依据:未直接插桩 UsageStatsManager,但 Android 11 上第三方应用取前台包名只有 UsageStatsManager 与无障碍服务两条路,后者未授予,而 /api/game/action/report 持续携带前台包名 —— 推断闭合。）（本轮观测到实际调用）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">两条路二选一。(a) 若陪玩功能只需知道「当前是不是在玩已支持的那几款游戏」,改用不需要该权限的窄接口:MediaProjection 会话本就由用户逐次授权,配合用户手动选择游戏即可,不必读取全设备使用统计。(b) 若必须保留,则把上报范围收窄到白名单内的游戏包名(当前实测把 launcher、系统设置、Chrome 一并上报),并把授权弹窗文案改成与实际一致——现文案称『only access the process name』,实际外传的是「包名 + 时间戳」序列,构成使用时间线;同时在政策中新增该处理活动的目的、法律依据与留存期。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">Manifest.permission.CAPTURE_AUDIO_OUTPUT</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">违规:与功能无关且高危</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">该权限为 signature|privileged 级,普通第三方应用无法获授。清单中声明它本身即异常(可捕获系统音频输出,即录制其他应用正在播放的声音)。应移除;若确有游戏内声音识别需求,须单独说明目的与法律依据。（本轮无调用证据(插桩未启用)）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">从清单中删除。该权限为 signature|privileged 级,第三方应用不可能获授,保留它只会在合规审查中被认定为意图捕获其他应用音频。游戏内声音若确需识别,应通过 MediaProjection 的AudioPlaybackCapture(Android 10+,用户逐次授权且应用可拒绝被录)实现,并单独告知目的。</td>
+            </tr>
+          
+          </tbody>
+        </table>
+        
+        <details class="ev" style="cursor:pointer;"><summary style="font-size:11.5px;color:#666;">【证据详情】(5)</summary><div style="font-size:11px;">· android.permission.WRITE_EXTERNAL_STORAGE：unnecessary/medium — targetSDK 36 下该权限在 Android 10+ 已基本失效(分区存储),保留写权限无对应功能需要,属冗余申请。</div><div style="font-size:11px;">· android.permission.ACCESS_MEDIA_LOCATION：unnecessary/high — 该权限专用于读取相册照片 EXIF 中的 GPS 坐标。头像/媒体上传无需用户的历史位置信息,属超出目的的收集(Art.5(1)(c))。应移除;确需上传原图时应先剥离 EXIF 位置。</div><div style="font-size:11px;">· android.permission.READ_PHONE_STATE：unnecessary/high — App 无电话/短信/SIM 相关面向用户功能,无对应 uses-feature 与组件。该权限是持久设备标识(IMEI/IMSI 等不可重置标识)的入口,与实测大量 device_id 上报形成呼应,属高危冗余申请。</div><div style="font-size:11px;">· android.permission.PACKAGE_USAGE_STATS：unnecessary/high — 特殊访问权限,可读取设备上『装了哪些 App、各用多久、最近何时使用』的完整使用行为画像。2026-08-12 以 Ultra 账号解锁屏幕共享后取得直接证据:共享期间 App 持续把前台应用包名上报第一方后端 —— `POST /api/game/action/report`,请求体形如 {"package":{"name":"com.android.settings"},"timestamp":1786508615},配套 `GET /api/game/get_game_by_package/<pkg>`;实测被上报的包含 com.google.android.apps.nexuslauncher、com.android.settings、com.android.chrome,并不限于游戏,频次约每 3-15 秒一次。因此本项已由『收了却用不上(免费用户授权后被 Ultra 付费墙挡住)』升级为『实际持续外传应用使用时间线』:授权弹窗自称『only access the process name』与实际上报的『包名+时间戳序列』不符,构成 Art.5(1)(a) 透明性与 Art.5(1)(c) 最小化问题;政策全文亦无 app usage / installed apps 相关披露。（运行时使用的判定依据:未直接插桩 UsageStatsManager,但 Android 11 上第三方应用取前台包名只有 UsageStatsManager 与无障碍服务两条路,后者未授予,而 /api/game/action/report 持续携带前台包名 —— 推断闭合。）</div><div style="font-size:11px;">· Manifest.permission.CAPTURE_AUDIO_OUTPUT：unnecessary/high — 该权限为 signature|privileged 级,普通第三方应用无法获授。清单中声明它本身即异常(可捕获系统音频输出,即录制其他应用正在播放的声音)。应移除;若确有游戏内声音识别需求,须单独说明目的与法律依据。</div></details>
+        <div class="rec">🔧 整改建议:按下表逐权限整改；凡保留的高敏权限，均需改为可选功能 + 即时申请 + 申请前单独告知目的、接收方与留存期。</div>
       </div>
       
       
@@ -4505,6 +4638,7 @@
         <h4>7. 提供行使数据主体权利的途径（访问/更正/删除/注销/可携） <span class="pill" style="background:#2e7d32">未发现违规风险</span></h4>
         <div class="reg">依据:GDPR Art.15-20</div>
         <div class="desc"><b>【结果描述】</b>隐私政策覆盖了访问、更正、删除/注销等数据主体权利的行使说明（数据可携 Art.20 未见,建议补充）。</div>
+        
         <details class="ev" style="cursor:pointer;"><summary style="font-size:11.5px;color:#666;">【证据详情】(3)</summary><div style="font-size:11px;">· 已覆盖：访问查阅(Art.15)</div><div style="font-size:11px;">· 已覆盖：更正(Art.16)</div><div style="font-size:11px;">· 已覆盖：删除/注销(Art.17)</div></details>
         
       </div>
@@ -4516,6 +4650,7 @@
         <div class="desc"><b>【结果描述】</b>隐私政策提供了拒绝/退出直接营销的说明。</div>
         
         
+        
       </div>
       
       
@@ -4523,6 +4658,7 @@
         <h4>9. 就画像/自动化决策告知用户并提供反对权(Art.21/22) <span class="pill" style="background:#999">本次不适用</span></h4>
         <div class="reg">依据:GDPR Art.22 · Art.13(2)(f)</div>
         <div class="desc"><b>【结果描述】</b>未观测到画像/自动化决策相关处理(未读应用列表、无广告定向 SDK 活动)。</div>
+        
         
         
       </div>
@@ -4539,6 +4675,7 @@
         <h4>10. 向用户披露个人数据的接收方或其类别（GDPR 不强制逐一具名 SDK） <span class="pill" style="background:#2e7d32">未发现违规风险</span></h4>
         <div class="reg">依据:GDPR Art.13(1)(e) · ePrivacy Art.5(3)</div>
         <div class="desc"><b>【结果描述】</b>运行时观测到的广告/追踪类 SDK 均在 CMP 同意清单中声明，接收方类别也已在隐私政策披露，满足 Art.13(1)(e)「接收方或类别」要求；另有 Volcengine UBA (ByteDance)、Sentry、ByteDance Frontier、Adjust 等未具名(政策已按类别披露即满足 GDPR，逐一具名属最佳实践、非强制)。</div>
+        
         <details class="ev" style="cursor:pointer;"><summary style="font-size:11.5px;color:#666;">【证据详情】(4)</summary><div style="font-size:11px;">· Volcengine UBA (ByteDance)：300 次数据连接（同意前、跨境、携带cookie）</div><div style="font-size:11px;">· Sentry：69 次数据连接（同意前、跨境、携带email）</div><div style="font-size:11px;">· ByteDance Frontier：64 次数据连接（同意前、跨境、携带device_id）</div><div style="font-size:11px;">· Adjust：46 次数据连接（同意前、跨境、携带advertising_id/device_id）</div></details>
         
       </div>
@@ -4547,7 +4684,90 @@
       <div class="finding" style="border-left-color:#b71c1c">
         <h4>11. 个人信息出境须声明合法传输机制(SCC/DPF 等) <span class="pill" style="background:#b71c1c">发现违规风险</span></h4>
         <div class="reg">依据:GDPR Chapter V (Art.44-49)</div>
-        <div class="desc"><b>【结果描述】</b>观测到向 EU/EEA 之外的请求，隐私政策未声明跨境传输机制。</div>
+        <div class="desc"><b>【结果描述】</b>观测到向 EU/EEA 之外的请求，隐私政策未声明跨境传输机制。按「接收方 × 目的地」逐组的合法化路径见下表（不同国家路径完全不同）。</div>
+        
+        <table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:11.5px;">
+          <thead><tr style="background:#f6f7fb;">
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:24%;">对象</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:14%;">定性</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:31%;">为什么违规</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:31%;">如何整改</th>
+          </tr></thead>
+          <tbody>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">imapi.bytepluses.com（BytePlus (ByteDance 国际云)）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">出境至 新加坡(SG)</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">本轮 1639 条请求发往该地，携带：未在报文中识别到直接标识符。隐私政策未声明任何跨境传输机制，Art.44 要求的「传输前须具备保障措施」不成立。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">新加坡(SG) 无充分性认定：须与 imapi.bytepluses.com 的运营主体签署标准合同条款(SCC)，并完成传输影响评估(TIA)——评估当地法律下政府调取数据的权限是否会架空 SCC；或改用部署在欧盟境内的同类服务。无论哪条路，都须在政策中具名披露该接收方、出境目的与所依据的传输机制。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">gator.uba.ap-southeast-1.volces.com（火山引擎 Volcengine (ByteDance)）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">出境至 新加坡(SG)</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">本轮 300 条请求发往该地，携带：cookie。隐私政策未声明任何跨境传输机制，Art.44 要求的「传输前须具备保障措施」不成立。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">新加坡(SG) 无充分性认定：须与 gator.uba.ap-southeast-1.volces.com 的运营主体签署标准合同条款(SCC)，并完成传输影响评估(TIA)——评估当地法律下政府调取数据的权限是否会架空 SCC；或改用部署在欧盟境内的同类服务。无论哪条路，都须在政策中具名披露该接收方、出境目的与所依据的传输机制。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">im-storage-atlanta.oss-us-southeast-1.aliyuncs.com（阿里云 OSS）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">出境至 美国(US)</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">本轮 222 条请求发往该地，携带：未在报文中识别到直接标识符。隐私政策未声明任何跨境传输机制，Art.44 要求的「传输前须具备保障措施」不成立。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">美国无国家级充分性认定，只有接收方本身在 EU-US Data Privacy Framework 认证名单内才可依 Art.45。须先核验 im-storage-atlanta.oss-us-southeast-1.aliyuncs.com 运营主体的 DPF 认证状态：已认证则在政策中写明「依据 DPF」；未认证则改用标准合同条款(SCC)+ 传输影响评估(TIA)，或停用该接收方。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">mlvbdc.live.tlivesource.com（腾讯云 LiteAV/TRTC 实时音视频）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">出境至 中国大陆(CN)</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">本轮 164 条请求发往该地，携带：未在报文中识别到直接标识符。隐私政策未声明任何跨境传输机制，Art.44 要求的「传输前须具备保障措施」不成立。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">中国大陆(CN) 无充分性认定：须与 mlvbdc.live.tlivesource.com 的运营主体签署标准合同条款(SCC)，并完成传输影响评估(TIA)——评估当地法律下政府调取数据的权限是否会架空 SCC；或改用部署在欧盟境内的同类服务。无论哪条路，都须在政策中具名披露该接收方、出境目的与所依据的传输机制。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">o4511244481003520.ingest.us.sentry.io（Sentry）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">出境至 美国(US)</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">本轮 69 条请求发往该地，携带：email。隐私政策未声明任何跨境传输机制，Art.44 要求的「传输前须具备保障措施」不成立。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">美国无国家级充分性认定，只有接收方本身在 EU-US Data Privacy Framework 认证名单内才可依 Art.45。须先核验 o4511244481003520.ingest.us.sentry.io 运营主体的 DPF 认证状态：已认证则在政策中写明「依据 DPF」；未认证则改用标准合同条款(SCC)+ 传输影响评估(TIA)，或停用该接收方。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">frontier-myatob.byteoversea.com（ByteDance 国际后端）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">出境至 新加坡(SG)</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">本轮 64 条请求发往该地，携带：device_id。隐私政策未声明任何跨境传输机制，Art.44 要求的「传输前须具备保障措施」不成立。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">新加坡(SG) 无充分性认定：须与 frontier-myatob.byteoversea.com 的运营主体签署标准合同条款(SCC)，并完成传输影响评估(TIA)——评估当地法律下政府调取数据的权限是否会架空 SCC；或改用部署在欧盟境内的同类服务。无论哪条路，都须在政策中具名披露该接收方、出境目的与所依据的传输机制。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">app.adjust.com（Adjust）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">出境至 美国(US)</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">本轮 46 条请求发往该地，携带：advertising_id、device_id。隐私政策未声明任何跨境传输机制，Art.44 要求的「传输前须具备保障措施」不成立。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">美国无国家级充分性认定，只有接收方本身在 EU-US Data Privacy Framework 认证名单内才可依 Art.45。须先核验 app.adjust.com 运营主体的 DPF 认证状态：已认证则在政策中写明「依据 DPF」；未认证则改用标准合同条款(SCC)+ 传输影响评估(TIA)，或停用该接收方。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">firebaseinstallations.googleapis.com（Google Cloud/Firebase）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">出境至 美国(US)</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">本轮 3 条请求发往该地，携带：未在报文中识别到直接标识符。隐私政策未声明任何跨境传输机制，Art.44 要求的「传输前须具备保障措施」不成立。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">美国无国家级充分性认定，只有接收方本身在 EU-US Data Privacy Framework 认证名单内才可依 Art.45。须先核验 firebaseinstallations.googleapis.com 运营主体的 DPF 认证状态：已认证则在政策中写明「依据 DPF」；未认证则改用标准合同条款(SCC)+ 传输影响评估(TIA)，或停用该接收方。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">firebaselogging.googleapis.com（Google Cloud/Firebase）</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">出境至 美国(US)</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">本轮 1 条请求发往该地，携带：未在报文中识别到直接标识符。隐私政策未声明任何跨境传输机制，Art.44 要求的「传输前须具备保障措施」不成立。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">美国无国家级充分性认定，只有接收方本身在 EU-US Data Privacy Framework 认证名单内才可依 Art.45。须先核验 firebaselogging.googleapis.com 运营主体的 DPF 认证状态：已认证则在政策中写明「依据 DPF」；未认证则改用标准合同条款(SCC)+ 传输影响评估(TIA)，或停用该接收方。</td>
+            </tr>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">accounts.google.com</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">出境至 美国(US)</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">本轮 1 条请求发往该地，携带：未在报文中识别到直接标识符。隐私政策未声明任何跨境传输机制，Art.44 要求的「传输前须具备保障措施」不成立。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">美国无国家级充分性认定，只有接收方本身在 EU-US Data Privacy Framework 认证名单内才可依 Art.45。须先核验 accounts.google.com 运营主体的 DPF 认证状态：已认证则在政策中写明「依据 DPF」；未认证则改用标准合同条款(SCC)+ 传输影响评估(TIA)，或停用该接收方。</td>
+            </tr>
+          
+          </tbody>
+        </table>
+        
         <details class="ev" style="cursor:pointer;"><summary style="font-size:11.5px;color:#666;">【证据详情】(10)</summary><div style="font-size:11px;">· t=24.065s | POST https://app.adjust.com/event | IP=? | 国家=US（域名运营主体启发式）| PII=advertising_id/device_id | 同意态=pre | 接收方=Adjust</div><div style="font-size:11px;">· t=37.380s | GET https://frontier-myatob.byteoversea.com/ws/v2?aid=889298&device_id=950052468350255121&access_key=c5d1d56fd8472b663526541fbbfbbd61 | IP=? | 国家=SG（域名运营主体启发式）| PII=device_id | 同意态=pre | 接收方=ByteDance Frontier</div><div style="font-size:11px;">· t=41.954s | POST https://gator.uba.ap-southeast-1.volces.com/service/2/app_log/?version_code=205&device_platform=android&aid=20004039&iid=769683504661 | IP=? | 国家=SG（云厂商域名区域标识）| PII=cookie | 同意态=pre | 接收方=Volcengine UBA (ByteDance)</div><div style="font-size:11px;">· t=3.886s | POST https://o4511244481003520.ingest.us.sentry.io/api/4511495090798592/envelope/ | IP=? | 国家=US（域名运营主体启发式）| PII=email | 同意态=pre | 接收方=Sentry</div><div style="font-size:11px;">· t=75.598s | GET https://accounts.google.com/.well-known/openid-configuration | IP=? | 国家=US（域名运营主体启发式）| PII=未检出 | 同意态=pre | 接收方=-</div><div style="font-size:11px;">· t=0.703s | POST https://firebaseinstallations.googleapis.com/v1/projects/hakkoai/installations | IP=? | 国家=US（域名运营主体启发式）| PII=未检出 | 同意态=pre | 接收方=Google Cloud/Firebase</div><div style="font-size:11px;">· t=59.338s | POST https://firebaselogging.googleapis.com/v0cc/log/batch?format=json_proto3 | IP=? | 国家=US（域名运营主体启发式）| PII=未检出 | 同意态=pre | 接收方=Google Cloud/Firebase</div><div style="font-size:11px;">· t=27.814s | GET https://im-storage-atlanta.oss-us-southeast-1.aliyuncs.com/ugc%2Fcharacter%2F686678692696424472%2F1783876100417_798338.jpg?OSSAccessKeyId=LTAI5t6ron | IP=? | 国家=US（云厂商域名区域标识）| PII=未检出 | 同意态=pre | 接收方=阿里云 OSS</div><div style="font-size:11px;">· t=31.387s | POST https://imapi.bytepluses.com/v1/account/check_token | IP=? | 国家=SG（域名运营主体启发式）| PII=未检出 | 同意态=pre | 接收方=BytePlus (ByteDance 国际云)</div><div style="font-size:11px;">· t=204.410s | POST https://mlvbdc.live.tlivesource.com/liteav | IP=? | 国家=CN（域名运营主体启发式）| PII=未检出 | 同意态=pre | 接收方=腾讯云 LiteAV/TRTC 实时音视频</div></details>
         <div class="rec">🔧 整改建议:在隐私政策中声明数据出境目的地与合法传输机制(标准合同条款 SCC / 充分性认定等)。</div>
       </div>
@@ -4564,6 +4784,26 @@
         <h4>12. 个人信息传输须加密(禁止明文 HTTP) <span class="pill" style="background:#b71c1c">发现违规风险</span></h4>
         <div class="reg">依据:GDPR Art.32</div>
         <div class="desc"><b>【结果描述】</b>应用显式允许明文流量(usesCleartextTraffic=true),存在个人数据以未加密方式 传输的配置风险。若动态抓包确认实际通过 HTTP 传输个人数据,将另按运行时实锤升为高风险。</div>
+        
+        <table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:11.5px;">
+          <thead><tr style="background:#f6f7fb;">
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:24%;">对象</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:14%;">定性</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:31%;">为什么违规</th>
+            <th style="text-align:left;padding:5px 6px;border:1px solid #e6e8f0;width:31%;">如何整改</th>
+          </tr></thead>
+          <tbody>
+          
+            <tr>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;font-family:ui-monospace,Menlo,monospace;word-break:break-all;">application@usesCleartextTraffic=true</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">配置项</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">清单允许全应用明文流量，任何 SDK 都可绕过 TLS 发送数据。</td>
+              <td style="padding:5px 6px;border:1px solid #e6e8f0;">删除 android:usesCleartextTraffic="true"；确有过渡期需求时改用 networkSecurityConfig 按域名白名单放行，并设置下线时间表。</td>
+            </tr>
+          
+          </tbody>
+        </table>
+        
         <details class="ev" style="cursor:pointer;"><summary style="font-size:11.5px;color:#666;">【证据详情】(1)</summary><div style="font-size:11px;">· application@usesCleartextTraffic=true</div></details>
         <div class="rec">🔧 整改建议:关闭 usesCleartextTraffic,全站强制 HTTPS,并通过 network-security-config 限制明文域名白名单。</div>
       </div>
